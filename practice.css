@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body{
+    background-color: #2b1c0d;
+    color: #ffffff;
+    position: relative;
+
+}
+nav{
+    background-color: black;
+    padding: 30px 20px;
+ display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    background-color: #212121;
+}
+nav h1{
+    font-size: 28px;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: red;
+}
+form input{
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #212121;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+
+}
+form button{
+    font-size: 17px;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    background-color: red;
+    border: 0;
+    outline: 0;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: rgb(252, 69, 69);
+}
+#result{
+    text-align: center;
+    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    padding: 50px;
+    margin-top: 20px;
+    /* 3 columns of equal width */
+}
+.ree{
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+#result h2{
+    text-transform: capitalize;
+    font-size: 25px;
+}
+@media (max-width:600px) {
+    #result{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+ 
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 50px;
+        gap: 10px;
+    } 
+    nav h1{
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    nav form{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+  
+
+    #recipeDtails{
+        min-width: 50%;
+    }
+    form button{
+        width: 100px;
+    }
+
+}
+#result div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    align-content: center;
+    margin: 10px;
+    background-color: #212121;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+#result img{
+    max-width: 300px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: transform .3s ease-in-out;
+
+}
+#result img:hover{
+    transform: scale(1.03);
+}
+.viewBtn{
+    font-size: 17px;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    background-color: red;
+    border: 0;
+    outline: 0;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+}
+.viewBtn:hover,
+#recipeDtails button:hover{
+    background-color: #c23124;
+
+}
+#recipeDtails{
+    width: 40%;
+    height: 60%;
+    font-size: 20px;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #684b2d;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: scroll;
+    display: none;
+
+}
+
+#recipeDetailsContent h2{
+   text-align: center;
+   text-decoration: underline;
+   margin-bottom: 10px;
+   text-transform: uppercase;
+}
+#recipeDetailsContent h3{
+    margin-bottom: 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: capitalize;
+}
+#recipeDetailsContent ul{
+    list-style: none;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#recipeDetailsContent{
+    line-height: 30px;
+}
+#recipeDtails::-webkit-scrollbar{
+    width: 10px;
+}
+#recipeDtails::-webkit-scrollbar-thumb{
+    background-color: #98989d;
+    border-radius: 20px;
+   
+
+}
+.re h2{
+    font-weight: 800;
+    color: red;
+
+}
+.re h3{
+    font-size: 18px;
+}
+.re h3 span{
+    font-size: 20px;
+    font-weight: 800;
+    color: red;
+}
+.re h1{
+    font-size: 2rem;
+}
+
+#recipeDtails button{
+    font-size: 20px;
+    color: #fff;
+    padding: 2px 5px;
+    background-color: red;
+    border: 0;
+    outline: 0;
+    font-weight: bold;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+#recipeDetailsContent p{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    white-space: pre-line;
+}
